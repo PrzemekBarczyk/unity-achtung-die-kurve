@@ -17,8 +17,8 @@ public class Head : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime);
-		transform.Translate(transform.up * moveSpeed * Time.fixedDeltaTime);
+		transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime, Space.Self);
+		transform.Translate(Vector2.up * moveSpeed * Time.fixedDeltaTime, Space.Self);
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
