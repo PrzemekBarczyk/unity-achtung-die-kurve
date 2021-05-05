@@ -10,19 +10,33 @@ public class Head : MonoBehaviour
 
 	float input;
 
+	bool isAlive = true;
+
+	GameManager gameManager;
+
+	void Start()
+	{
+		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+	}
+
 	void Update()
 	{
-		input = Input.GetAxisRaw(inputAxis);
+		if (isAlive) input = Input.GetAxisRaw(inputAxis);
 	}
 
 	void FixedUpdate()
 	{
-		transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime, Space.Self);
-		transform.Translate(Vector2.up * moveSpeed * Time.fixedDeltaTime, Space.Self);
+		if (isAlive)
+		{
+			transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime, Space.Self);
+			transform.Translate(Vector2.up * moveSpeed * Time.fixedDeltaTime, Space.Self);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		Debug.Log("Collision with: " + collision.name);
+		isAlive = false;
+		gameManager.RestartLevel();
 	}
 }
