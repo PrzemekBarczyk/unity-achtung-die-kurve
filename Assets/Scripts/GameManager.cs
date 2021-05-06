@@ -9,8 +9,24 @@ public class GameManager : MonoBehaviour
 
 	void Start()
 	{
+		Pause();
 		sceneManager = GameObject.Find("Scene Manager").GetComponent<SceneManager>();
 		leftAlivePlayersNumber = players.Length;
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space)) Resume();
+	}
+
+	void Resume()
+	{
+		Time.timeScale = 1f;
+	}
+
+	void Pause()
+	{
+		Time.timeScale = 0f;
 	}
 
 	public void RestartLevel()
