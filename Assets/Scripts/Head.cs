@@ -16,6 +16,9 @@ public class Head : MonoBehaviour
 
 	void Start()
 	{
+		Debug.Log("MinX: " + Camera.main.pixelHeight);
+		transform.position = RandomPosition();
+		transform.eulerAngles = RandomRotation();
 		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 	}
 
@@ -38,5 +41,15 @@ public class Head : MonoBehaviour
 		Debug.Log("Collision with: " + collision.name);
 		isAlive = false;
 		gameManager.RestartLevel();
+	}
+
+	Vector2 RandomPosition()
+	{
+		return new Vector2(Random.Range(Window.MinX(), Window.MaxX()), Random.Range(Window.MinY(), Window.MaxY()));
+	}
+
+	Vector3 RandomRotation()
+	{
+		return Vector3.forward * Random.Range(0f, 360f);
 	}
 }
