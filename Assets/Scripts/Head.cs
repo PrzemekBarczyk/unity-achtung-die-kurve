@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Head : MonoBehaviour
 {
+	[SerializeField] bool isBot;
+	[SerializeField] Pathfinder pathfinder;
 	[SerializeField] Tail tail;
 	Tail currentTail;
 	[SerializeField] string inputAxis = "Horizontal";
@@ -26,7 +28,8 @@ public class Head : MonoBehaviour
 
 	void Update()
 	{
-		if (isAlive) input = Input.GetAxisRaw(inputAxis);
+		if (isBot && isAlive) input = pathfinder.FindInput();
+		else if (!isBot && isAlive) input = Input.GetAxisRaw(inputAxis);
 	}
 
 	void FixedUpdate()

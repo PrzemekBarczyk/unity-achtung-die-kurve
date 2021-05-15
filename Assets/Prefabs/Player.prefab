@@ -144,7 +144,9 @@ EdgeCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
-  m_Points: []
+  m_Points:
+  - {x: 100, y: 100}
+  - {x: 101, y: 101}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -222,13 +224,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173838755088442065}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: -3, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1173838754370954020}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1173838755088442066
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -329,5 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a2fe794884d764497feb535e510ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBot: 0
+  tail: {fileID: 1173838753929375236}
+  inputAxis: Horizontal
   moveSpeed: 3
   rotationSpeed: 150
