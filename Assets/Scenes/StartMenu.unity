@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 20784471}
   - component: {fileID: 20784470}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42984773}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,7 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 160072455}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1544,10 +1544,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 175413177}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1821191707}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &373442339
 GameObject:
@@ -1713,7 +1725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397073764}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2126,85 +2138,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452106229}
   m_CullTransparentMesh: 1
---- !u!1 &486287450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 486287451}
-  - component: {fileID: 486287453}
-  - component: {fileID: 486287452}
-  m_Layer: 5
-  m_Name: Right Key Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &486287451
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486287450}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1904328986}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 200}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &486287452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486287450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 42
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: RIGHT
---- !u!222 &486287453
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486287450}
-  m_CullTransparentMesh: 1
 --- !u!1 &491900460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +2223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498116142}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,7 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2399,10 +2332,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1387091480}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1985548453}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &505780624
 GameObject:
@@ -2878,7 +2823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668744490}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2918,7 +2863,7 @@ GameObject:
   - component: {fileID: 699233537}
   - component: {fileID: 699233536}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2995,7 +2940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703462349}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3307,7 +3252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -3337,10 +3282,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1495280541}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1700410876}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &847459501
 GameObject:
@@ -3433,7 +3390,7 @@ GameObject:
   - component: {fileID: 869561161}
   - component: {fileID: 869561160}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4435,7 +4392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219766193}
   m_Layer: 5
-  m_Name: Chose left key
+  m_Name: Left Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4771,7 +4728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4801,10 +4758,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 558212212}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1714056626}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1349325044
 GameObject:
@@ -4890,6 +4859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365987263}
+  - component: {fileID: 1365987264}
   m_Layer: 5
   m_Name: Player Selection (4)
   m_TagString: Untagged
@@ -4922,6 +4892,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1365987264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365987262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1897321384}
+  playerNameText: {fileID: 610682470}
+  leftKeyInfo: {fileID: 703462348}
+  leftKeyText: {fileID: 1152981028}
+  rightKeyInfo: {fileID: 2038928907}
+  rightKeyText: {fileID: 420622030}
 --- !u!1 &1387091478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,7 +5036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5078,10 +5066,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2000252744}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1766768788}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1427352547
 GameObject:
@@ -5095,7 +5095,7 @@ GameObject:
   - component: {fileID: 1427352550}
   - component: {fileID: 1427352549}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5773,7 +5773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554121586}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5892,7 +5892,7 @@ GameObject:
   - component: {fileID: 1582831017}
   - component: {fileID: 1582831016}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6138,7 +6138,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb462bb294cbb594fa52dabc09621599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
+  fred:
+    IsBot: 1
+    Name: Fred
+    Material: {fileID: 2100000, guid: 16272e084496c7b48abd405d577e8c71, type: 2}
+    LeftKey: 0
+    RightKey: 0
+  greenlee:
+    IsBot: 1
+    Name: Greenlee
+    Material: {fileID: 2100000, guid: cb34ba02509cd074094beb94cf1778e1, type: 2}
+    LeftKey: 0
+    RightKey: 0
+  pinkey:
+    IsBot: 1
+    Name: Pinkey
+    Material: {fileID: 2100000, guid: 3eff5278cb4cc3b4c84beb8fb6a51462, type: 2}
+    LeftKey: 0
+    RightKey: 0
+  bluebell:
+    IsBot: 1
+    Name: Bluebell
+    Material: {fileID: 2100000, guid: fa5b1a65cecc9d04eb9178c8e23ced92, type: 2}
+    LeftKey: 0
+    RightKey: 0
+  willem:
+    IsBot: 1
+    Name: Willem
+    Material: {fileID: 2100000, guid: 1dd5a133c922b614dab87ee0d58c1bb5, type: 2}
+    LeftKey: 0
+    RightKey: 0
+  greydon:
+    IsBot: 1
+    Name: Greydon
+    Material: {fileID: 2100000, guid: f9125ba8eb1e3ab47a422002002ce7e0, type: 2}
+    LeftKey: 0
+    RightKey: 0
 --- !u!4 &1633744757
 Transform:
   m_ObjectHideFlags: 0
@@ -6163,7 +6198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1684486376}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6200,6 +6235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700410875}
+  - component: {fileID: 1700410876}
   m_Layer: 5
   m_Name: Player Selection (5)
   m_TagString: Untagged
@@ -6232,6 +6268,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1700410876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700410874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 832774822}
+  playerNameText: {fileID: 618243319}
+  leftKeyInfo: {fileID: 397073763}
+  leftKeyText: {fileID: 1840576254}
+  rightKeyInfo: {fileID: 2040983507}
+  rightKeyText: {fileID: 2137975642}
 --- !u!1 &1714056624
 GameObject:
   m_ObjectHideFlags: 0
@@ -6241,6 +6295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714056625}
+  - component: {fileID: 1714056626}
   m_Layer: 5
   m_Name: Player Selection (1)
   m_TagString: Untagged
@@ -6273,6 +6328,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1714056626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714056624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1321463965}
+  playerNameText: {fileID: 385795035}
+  leftKeyInfo: {fileID: 668744489}
+  leftKeyText: {fileID: 271321460}
+  rightKeyInfo: {fileID: 1684486375}
+  rightKeyText: {fileID: 754998521}
 --- !u!1 &1766768786
 GameObject:
   m_ObjectHideFlags: 0
@@ -6282,6 +6355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1766768787}
+  - component: {fileID: 1766768788}
   m_Layer: 5
   m_Name: Player Selection (2)
   m_TagString: Untagged
@@ -6314,6 +6388,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1766768788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766768786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1392049952}
+  playerNameText: {fileID: 847459503}
+  leftKeyInfo: {fileID: 1219766192}
+  leftKeyText: {fileID: 1562845217}
+  rightKeyInfo: {fileID: 1554121585}
+  rightKeyText: {fileID: 2108998675}
 --- !u!1 &1784794112
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,7 +6418,7 @@ GameObject:
   - component: {fileID: 1784794115}
   - component: {fileID: 1784794114}
   m_Layer: 5
-  m_Name: Number Text
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6637,6 +6729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1821191706}
+  - component: {fileID: 1821191707}
   m_Layer: 5
   m_Name: Player Selection (3)
   m_TagString: Untagged
@@ -6669,6 +6762,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1821191707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821191705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 361397274}
+  playerNameText: {fileID: 1818263643}
+  leftKeyInfo: {fileID: 498116141}
+  leftKeyText: {fileID: 744044304}
+  rightKeyInfo: {fileID: 2110070573}
+  rightKeyText: {fileID: 149243915}
 --- !u!1 &1828001518
 GameObject:
   m_ObjectHideFlags: 0
@@ -7184,7 +7295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -7214,10 +7325,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 409731063}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1904328987}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1365987264}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: ChoosePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1904328985
 GameObject:
@@ -7228,6 +7351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1904328986}
+  - component: {fileID: 1904328987}
   m_Layer: 5
   m_Name: Player Selection Section
   m_TagString: Untagged
@@ -7254,7 +7378,6 @@ RectTransform:
   - {fileID: 1821191706}
   - {fileID: 1365987263}
   - {fileID: 1700410875}
-  - {fileID: 486287451}
   m_Father: {fileID: 1239515286}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7263,6 +7386,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1904328987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904328985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 1
 --- !u!1 &1908120278
 GameObject:
   m_ObjectHideFlags: 0
@@ -7391,6 +7527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1985548452}
+  - component: {fileID: 1985548453}
   m_Layer: 5
   m_Name: Player Selection (0)
   m_TagString: Untagged
@@ -7423,6 +7560,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1985548453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985548451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b14ec1cf8cecd4db6b0e6f54db39e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 500868612}
+  playerNameText: {fileID: 284387656}
+  leftKeyInfo: {fileID: 160072454}
+  leftKeyText: {fileID: 1432749605}
+  rightKeyInfo: {fileID: 42984772}
+  rightKeyText: {fileID: 1988723126}
 --- !u!1 &1988723124
 GameObject:
   m_ObjectHideFlags: 0
@@ -7587,7 +7742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038928908}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7704,7 +7859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040983508}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7896,7 +8051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110070574}
   m_Layer: 5
-  m_Name: Chose right key
+  m_Name: Right Key Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

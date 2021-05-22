@@ -8,7 +8,8 @@ public class Head : MonoBehaviour
 	[SerializeField] Pathfinder pathfinder;
 	[SerializeField] Tail tail;
 	Tail currentTail;
-	[SerializeField] string inputAxis = "Horizontal";
+	[SerializeField] public KeyCode LeftKey;
+	[SerializeField] public KeyCode RightKey;
 	[SerializeField] float moveSpeed = 3f;
 	[SerializeField] float rotationSpeed = 150f;
 
@@ -29,7 +30,7 @@ public class Head : MonoBehaviour
 	void Update()
 	{
 		if (isBot && isAlive) input = pathfinder.FindInput();
-		else if (!isBot && isAlive) input = Input.GetAxisRaw(inputAxis);
+		else if (!isBot && isAlive) input = GetInput();
 	}
 
 	void FixedUpdate()
@@ -47,7 +48,7 @@ public class Head : MonoBehaviour
 		if (isAlive)
 		{
 			isAlive = false;
-			gameManager.RestartLevel();
+			gameManager.RestartGame();
 		}
 	}
 
@@ -55,6 +56,13 @@ public class Head : MonoBehaviour
 	{
 		currentTail.IsActive(false);
 		currentTail = Instantiate(tail, transform.parent);
+	}
+
+	int GetInput()
+	{
+		if (Input.GetKey(LeftKey)) return -1;
+		if (Input.GetKey(RightKey)) return 1;
+		return 0;
 	}
 
 	Vector2 RandomPosition()
