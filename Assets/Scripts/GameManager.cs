@@ -5,6 +5,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] players;
 	int leftAlivePlayersNumber;
 
+	public static bool PlayMusic { get; set; }
+	public static bool PlaySound { get; set; }
+
 	SceneManager sceneManager;
 
 	void Start()
