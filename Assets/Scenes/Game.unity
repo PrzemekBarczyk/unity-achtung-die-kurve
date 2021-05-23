@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Bluebell
+  IsPlayerAlive: 1
   scoreText: {fileID: 842684488}
 --- !u!1 &248003048
 GameObject:
@@ -858,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Greenlee
+  IsPlayerAlive: 1
   scoreText: {fileID: 1524750621}
 --- !u!1 &519420028
 GameObject:
@@ -1262,6 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Fred
+  IsPlayerAlive: 1
   scoreText: {fileID: 248003050}
 --- !u!1 &796302203
 GameObject:
@@ -1314,6 +1317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Greydon
+  IsPlayerAlive: 1
   scoreText: {fileID: 348791005}
 --- !u!1 &801249881
 GameObject:
@@ -1797,6 +1801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935880199}
+  - component: {fileID: 935880200}
   m_Layer: 0
   m_Name: Borders
   m_TagString: Untagged
@@ -1822,6 +1827,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &935880200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935880198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25527a71d22876847bd8ca65a54ada57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBorder: {fileID: 582657292}
+  rightBorder: {fileID: 872266268}
+  bottomBorder: {fileID: 1558393542}
+  topBorder: {fileID: 2074265587}
 --- !u!1 &983224980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Pinkey
+  IsPlayerAlive: 1
   scoreText: {fileID: 325944723}
 --- !u!1 &1341750666
 GameObject:
@@ -2631,6 +2653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Willem
+  IsPlayerAlive: 1
   scoreText: {fileID: 618762783}
 --- !u!1 &1558393541
 GameObject:

@@ -1,28 +1,33 @@
 using UnityEngine;
 
-public class Window : MonoBehaviour
+public class Borders : MonoBehaviour
 {
-    public static float MinX()
+	[SerializeField] Transform leftBorder;
+	[SerializeField] Transform rightBorder;
+	[SerializeField] Transform bottomBorder;
+	[SerializeField] Transform topBorder;
+
+	public float MinX()
 	{
-		return Camera.main.ScreenToWorldPoint(Vector2.zero).x;
+		return leftBorder.position.x;
 	}
 
-	public static float MaxX()
+	public float MaxX()
 	{
-		return Camera.main.ScreenToWorldPoint(new Vector2(Camera.main.pixelWidth, 0f)).x;
+		return rightBorder.position.x;
 	}
 
-	public static float MinY()
+	public float MinY()
 	{
-		return Camera.main.ScreenToWorldPoint(Vector2.zero).y;
+		return bottomBorder.position.y;
 	}
 
-	public static float MaxY()
+	public float MaxY()
 	{
-		return Camera.main.ScreenToWorldPoint(new Vector2(0f, Camera.main.pixelHeight)).y;
+		return topBorder.position.y;
 	}
 
-	public static void VoyageThroughVoid(Transform player)
+	public void VoyageThroughVoid(Transform player)
 	{
 		if (player.position.x < MinX())
 		{

@@ -20,14 +20,16 @@ public class Head : MonoBehaviour
 
 	GameManager gameManager;
 	ScoreBoard scoreBoard;
+	Borders borders;
 
 	void Start()
 	{
 		currentTail = tail;
+		scoreBoard = FindObjectOfType<ScoreBoard>();
+		borders = FindObjectOfType<Borders>();
+		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 		transform.position = RandomPosition();
 		transform.eulerAngles = RandomRotation();
-		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		scoreBoard = FindObjectOfType<ScoreBoard>();
 	}
 
 	void Update()
@@ -42,7 +44,7 @@ public class Head : MonoBehaviour
 		{
 			transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime, Space.Self);
 			transform.Translate(Vector2.up * moveSpeed * Time.fixedDeltaTime, Space.Self);
-			Window.VoyageThroughVoid(transform);
+			borders.VoyageThroughVoid(transform);
 		}
 	}
 
@@ -71,7 +73,7 @@ public class Head : MonoBehaviour
 
 	Vector2 RandomPosition()
 	{
-		return new Vector2(Random.Range(Window.MinX(), Window.MaxX()), Random.Range(Window.MinY(), Window.MaxY()));
+		return new Vector2(Random.Range(borders.MinX(), borders.MaxX()), Random.Range(borders.MinY(), borders.MaxY()));
 	}
 
 	Vector3 RandomRotation()
