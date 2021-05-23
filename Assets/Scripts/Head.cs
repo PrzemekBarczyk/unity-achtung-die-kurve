@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Head : MonoBehaviour
 {
+	public string Name { get; set; }
 	[SerializeField] bool isBot;
 	[SerializeField] Pathfinder pathfinder;
 	[SerializeField] Tail tail;
@@ -15,9 +16,10 @@ public class Head : MonoBehaviour
 
 	float input;
 
-	bool isAlive = true;
+	public bool IsAlive { get; private set; } = true;
 
 	GameManager gameManager;
+	ScoreBoard scoreBoard;
 
 	void Start()
 	{
@@ -25,17 +27,18 @@ public class Head : MonoBehaviour
 		transform.position = RandomPosition();
 		transform.eulerAngles = RandomRotation();
 		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+		scoreBoard = FindObjectOfType<ScoreBoard>();
 	}
 
 	void Update()
 	{
-		if (isBot && isAlive) input = pathfinder.FindInput();
-		else if (!isBot && isAlive) input = GetInput();
+		if (isBot && IsAlive) input = pathfinder.FindInput();
+		else if (!isBot && IsAlive) input = GetInput();
 	}
 
 	void FixedUpdate()
 	{
-		if (isAlive)
+		if (IsAlive)
 		{
 			transform.Rotate(Vector3.forward * rotationSpeed * -input * Time.fixedDeltaTime, Space.Self);
 			transform.Translate(Vector2.up * moveSpeed * Time.fixedDeltaTime, Space.Self);
@@ -45,9 +48,10 @@ public class Head : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (isAlive)
+		if (IsAlive)
 		{
-			isAlive = false;
+			IsAlive = false;
+			scoreBoard.UpdateScore(Name);
 			gameManager.RestartGame();
 		}
 	}
