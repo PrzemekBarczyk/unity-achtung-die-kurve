@@ -448,7 +448,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 205561637}
-  - component: {fileID: 205561638}
   m_Layer: 5
   m_Name: Player Score (3)
   m_TagString: Untagged
@@ -477,21 +476,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &205561638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205561636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Bluebell
-  IsPlayerAlive: 1
-  scoreText: {fileID: 842684488}
 --- !u!1 &248003048
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +801,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 513605111}
-  - component: {fileID: 513605112}
   m_Layer: 5
   m_Name: Player Score (4)
   m_TagString: Untagged
@@ -846,21 +829,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &513605112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513605110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Greenlee
-  IsPlayerAlive: 1
-  scoreText: {fileID: 1524750621}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1190,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743998241}
-  - component: {fileID: 743998242}
   m_Layer: 5
   m_Name: Player Score (0)
   m_TagString: Untagged
@@ -1251,21 +1218,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &743998242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743998240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Fred
-  IsPlayerAlive: 1
-  scoreText: {fileID: 248003050}
 --- !u!1 &796302203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1227,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 796302204}
-  - component: {fileID: 796302205}
   m_Layer: 5
   m_Name: Player Score (5)
   m_TagString: Untagged
@@ -1304,21 +1255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &796302205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796302203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Greydon
-  IsPlayerAlive: 1
-  scoreText: {fileID: 348791005}
 --- !u!1 &801249881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,7 +2117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331932959}
-  - component: {fileID: 1331932960}
   m_Layer: 5
   m_Name: Player Score (1)
   m_TagString: Untagged
@@ -2210,21 +2145,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1331932960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331932958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Pinkey
-  IsPlayerAlive: 1
-  scoreText: {fileID: 325944723}
 --- !u!1 &1341750666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,13 +2515,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35beaba779a12f84d88003321771b96f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  names:
+  - {fileID: 61815530}
+  - {fileID: 1859770630}
+  - {fileID: 3196691}
+  - {fileID: 259044875}
+  - {fileID: 1445974083}
+  - {fileID: 1457772404}
   scores:
-  - {fileID: 743998242}
-  - {fileID: 1331932960}
-  - {fileID: 1543041532}
-  - {fileID: 205561638}
-  - {fileID: 513605112}
-  - {fileID: 796302205}
+  - {fileID: 248003050}
+  - {fileID: 325944723}
+  - {fileID: 618762783}
+  - {fileID: 842684488}
+  - {fileID: 1524750621}
+  - {fileID: 348791005}
 --- !u!1 &1543041530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2538,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543041531}
-  - component: {fileID: 1543041532}
   m_Layer: 5
   m_Name: Player Score (2)
   m_TagString: Untagged
@@ -2640,21 +2566,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1543041532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543041530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae279b6de8b1541aa550c8650baa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: Willem
-  IsPlayerAlive: 1
-  scoreText: {fileID: 618762783}
 --- !u!1 &1558393541
 GameObject:
   m_ObjectHideFlags: 0

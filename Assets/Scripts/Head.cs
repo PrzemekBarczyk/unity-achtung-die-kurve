@@ -53,7 +53,7 @@ public class Head : MonoBehaviour
 		if (IsAlive)
 		{
 			IsAlive = false;
-			scoreBoard.UpdateScore(Name);
+			scoreBoard.UpdateScores(Name);
 			gameManager.RestartGame();
 		}
 	}
