@@ -3,43 +3,75 @@ using UnityEngine;
 [RequireComponent(typeof(Head))]
 public class Pathfinder : MonoBehaviour
 {
-	[SerializeField] Transform[] rayTargets;
+	[SerializeField] Transform leftHeadPosition;
+	[SerializeField] Transform rightHeadPosition;
+
+	[SerializeField] RayTarget[] rayTargets;
 	[SerializeField] LayerMask ignoreRaycast;
+
+	bool noCollisionInThisFrame = true;
 
 	public float FindInput()
 	{
-		Vector3 farrestPoint = transform.position;
+		noCollisionInThisFrame = true;
+
+		Vector3 farrestCollidingRayTargetPosition = transform.position;
 		RaycastHit2D previousRaycast = Physics2D.Raycast(transform.position, transform.position, 0f, ignoreRaycast);
-		for (int i = 0; i < rayTargets.Length; i++)
+
+		foreach (RayTarget rayTarget in rayTargets)
 		{
-			RaycastHit2D newRaycastHit = Physics2D.Raycast(transform.position, rayTargets[i].position - transform.position, Vector2.Distance(transform.position, rayTargets[i].position), ~ignoreRaycast); // cast ray in point direction
-			if (newRaycastHit.collider == null) // ray didn't collide
+			// cast two rays in target direction: one from left side and one from right side of head object
+			RaycastHit2D newLeftRaycastHit = Physics2D.Raycast(leftHeadPosition.position, rayTarget.GetLeftTargetPosition() - leftHeadPosition.position,
+															   Vector2.Distance(leftHeadPosition.position, rayTarget.GetLeftTargetPosition()), ~ignoreRaycast);
+
+			RaycastHit2D newRightRaycastHit = Physics2D.Raycast(rightHeadPosition.position, rayTarget.GetRightTargetPosition() - rightHeadPosition.position,
+															   Vector2.Distance(rightHeadPosition.position, rayTarget.GetRightTargetPosition()), ~ignoreRaycast);
+			
+			if (newLeftRaycastHit.collider != null || newRightRaycastHit.collider != null) // ray did collide
 			{
-				farrestPoint = rayTargets[i].position; // save that point
-				break;
-			}
-			else // ray did collide
-			{
+				RaycastHit2D newRaycastHit = newLeftRaycastHit.collider == null ? newRightRaycastHit : newLeftRaycastHit; // choose colliding ray
+
 				Debug.DrawLine(transform.position, newRaycastHit.point, Color.yellow, 0.1f);
-				if (Vector2.Distance(transform.position, newRaycastHit.point) > Vector2.Distance(transform.position, previousRaycast.point)) farrestPoint = rayTargets[i].position; // save farrest point
+
+				if (Vector2.Distance(transform.position, newRaycastHit.point) > Vector2.Distance(transform.position, previousRaycast.point))
+					farrestCollidingRayTargetPosition = rayTarget.transform.position; // save farrest ray target
+
 				previousRaycast = newRaycastHit;
+				noCollisionInThisFrame = false;
+			}
+			else // ray did not collide
+			{
+				Debug.DrawLine(transform.position, rayTarget.transform.position, Color.blue, 0.1f);
+
+				if (Vector2.Distance(transform.position, newLeftRaycastHit.point) > Vector2.Distance(transform.position, previousRaycast.point))
+					farrestCollidingRayTargetPosition = rayTarget.transform.position; // save farrest ray target
+
+				previousRaycast = newLeftRaycastHit;
 			}
 		}
-		Debug.DrawLine(transform.position, farrestPoint, Color.red, 0.1f);
-		return PointToInput(farrestPoint);
+
+		if (noCollisionInThisFrame) // choose target position randomly
+		{
+			Vector3 randomRayTargetPosition = rayTargets[Random.Range(0, rayTargets.Length)].transform.position;
+			return PointToInput(randomRayTargetPosition);
+		}
+
+		return PointToInput(farrestCollidingRayTargetPosition);
 	}
 
 	float PointToInput(Vector3 point)
 	{
-		if (point == rayTargets[0].position) return 0f;
-		if (point == rayTargets[1].position) return -1f;
-		if (point == rayTargets[2].position) return -1f;
-		if (point == rayTargets[3].position) return -1f;
-		if (point == rayTargets[4].position) return -1f;
-		if (point == rayTargets[5].position) return 1f;
-		if (point == rayTargets[6].position) return 1f;
-		if (point == rayTargets[7].position) return 1f;
-		if (point == rayTargets[8].position) return 1f;
+		Debug.DrawLine(transform.position, point, Color.green, 0.1f);
+
+		if (point == rayTargets[0].transform.position) return -0.2f;
+		if (point == rayTargets[1].transform.position) return 0.2f;
+		if (point == rayTargets[2].transform.position) return -0.5f;
+		if (point == rayTargets[3].transform.position) return 0.5f;
+		if (point == rayTargets[4].transform.position) return -0.8f;
+		if (point == rayTargets[5].transform.position) return 0.8f;
+		if (point == rayTargets[6].transform.position) return -1f;
+		if (point == rayTargets[7].transform.position) return 1f;
+
 		return 0f;
 	}
 }
