@@ -13,6 +13,9 @@ public class ScoreBoard : MonoBehaviour
 	{
 		playersWithData = GameManager.GetAllPlayers();
 
+		foreach (var player in playersWithData)
+			player.IsAlive = true;
+
 		UpdateScoreBoard();
 	}
 
